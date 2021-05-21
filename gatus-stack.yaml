@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  gatus:
+    container_name: gatus
+    image: twinproduction/gatus:latest
+    restart: always
+    ports:
+      - 19998:19998
+    volumes:
+      - ./config.yaml:/config/config.yaml
+    networks:
+      - metrics
+
+networks:
+  metrics:
+    driver: bridge

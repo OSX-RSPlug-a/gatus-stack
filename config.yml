@@ -1,0 +1,12 @@
+services:
+  - name: Google site
+    url: https://google.com/
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: DuckDuckgo
+    url: https://duckduckgo.com
+    interval: 1m
+    conditions:
+      - "[STATUS] == 200"
